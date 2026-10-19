@@ -1,5 +1,6 @@
-"""Small 1D-CNN autoencoder. Decoder is Dense-only on purpose: Dense/Conv/Reshape
-are the safest ops for TFLM on the ESP32-S3."""
+"""Fully-convolutional 1D autoencoder (translation-equivariant, so a QRS complex can sit
+anywhere in the window). Bottleneck = 45 time steps x BOTTLENECK_CH channels.
+Only Conv / TransposeConv ops -> supported by TFLM on the ESP32-S3."""
 import numpy as np
 from tensorflow import keras
 from tensorflow.keras import layers
@@ -7,16 +8,14 @@ from tensorflow.keras import layers
 from . import config as C
 
 
-def build_autoencoder(window=C.WINDOW, latent=C.LATENT_DIM):
+def build_autoencoder(window=C.WINDOW, bottleneck_ch=C.BOTTLENECK_CH):
     inp = keras.Input(shape=(window, 1), name="ecg")
-    x = layers.Conv1D(8, 7, strides=2, padding="same", activation="relu")(inp)
-    x = layers.Conv1D(16, 5, strides=2, padding="same", activation="relu")(x)
-    x = layers.Conv1D(16, 5, strides=2, padding="same", activation="relu")(x)
-    x = layers.Flatten()(x)
-    z = layers.Dense(latent, activation="relu", name="latent")(x)
-    x = layers.Dense(32, activation="relu")(z)
-    x = layers.Dense(window)(x)
-    out = layers.Reshape((window, 1), name="recon")(x)
+    x = layers.Conv1D(16, 7, strides=2, padding="same", activation="relu")(inp)   # 180
+    x = layers.Conv1D(32, 5, strides=2, padding="same", activation="relu")(x)     # 90
+    z = layers.Conv1D(bottleneck_ch, 5, strides=2, padding="same", name="latent")(x)  # 45
+    x = layers.Conv1DTranspose(32, 5, strides=2, padding="same", activation="relu")(z)  # 90
+    x = layers.Conv1DTranspose(16, 5, strides=2, padding="same", activation="relu")(x)  # 180
+    out = layers.Conv1DTranspose(1, 7, strides=2, padding="same", name="recon")(x)       # 360
     return keras.Model(inp, out, name="ecg_autoencoder")
 
 

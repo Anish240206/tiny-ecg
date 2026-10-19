@@ -34,7 +34,10 @@ def main():
         for x in rep:
             yield [x[None].astype(np.float32)]
 
-    conv = tf.lite.TFLiteConverter.from_keras_model(model)
+    # fixed batch size 1 -> clean op list for TFLM (no SHAPE/STRIDED_SLICE ops)
+    inp = keras.Input(shape=(C.WINDOW, 1), batch_size=1)
+    model_b1 = keras.Model(inp, model(inp))
+    conv = tf.lite.TFLiteConverter.from_keras_model(model_b1)
     conv.optimizations = [tf.lite.Optimize.DEFAULT]
     conv.representative_dataset = rep_data
     conv.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]

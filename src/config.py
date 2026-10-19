@@ -39,8 +39,8 @@ BEAT_SYMBOLS = set("NLRBAaJSVrFejnE/fQ?")
 NORMAL_SYMBOL = "N"
 
 # --- Training / threshold ---
-LATENT_DIM = 16
-EPOCHS = 60
+BOTTLENECK_CH = 2   # latent = 45 steps x BOTTLENECK_CH channels
+EPOCHS = 100
 BATCH_SIZE = 128
 SEED = 42
 THRESHOLD_PERCENTILE = 99.0   # of reconstruction error on validation-normal windows
