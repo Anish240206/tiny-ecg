@@ -1,0 +1,14 @@
+{
+  "threshold": 0.9104872345924377,
+  "auroc": 0.4707493176021664,
+  "recall_sensitivity": 0.008256815431703325,
+  "specificity": 0.9962021847226029,
+  "precision": 0.5446009389671361,
+  "false_alarms_per_hour": 13.672134998629655,
+  "tp": 116,
+  "fn": 13933,
+  "fp": 97,
+  "tn": 25444,
+  "n_windows": 39590,
+  "anomaly_fraction": 0.3548623389744885
+}
