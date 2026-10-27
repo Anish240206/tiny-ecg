@@ -1,0 +1,15 @@
+{
+  "threshold": 0.097667396068573,
+  "auroc": 0.8462215558370463,
+  "recall_sensitivity": 0.18449711723254325,
+  "specificity": 0.9603774323636506,
+  "precision": 0.7192008879023307,
+  "false_alarms_per_hour": 142.64124349085785,
+  "tp": 2592,
+  "fn": 11457,
+  "fp": 1012,
+  "tn": 24529,
+  "n_windows": 39590,
+  "anomaly_fraction": 0.3548623389744885,
+  "model_size_kb": 14.3671875
+}
