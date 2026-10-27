@@ -44,3 +44,13 @@ def plot_diagnostics(y, err, thr, tag):
     plt.axvline(thr, c="k", ls="--", label="threshold")
     plt.xlabel("Reconstruction MSE"); plt.legend(); plt.title(f"Error distribution ({tag})")
     plt.tight_layout(); plt.savefig(C.RESULTS_DIR / f"errhist_{tag}.png", dpi=150); plt.close()
+
+
+def sweep_thresholds(err_val_normal, y, err, percentiles=(80, 90, 95, 97, 98, 99)):
+    """Thresholds come from VALIDATION-normal scores only; metrics are measured on test."""
+    rows = []
+    for p in percentiles:
+        r = summarize(y, err, float(np.percentile(err_val_normal, p)))
+        r["val_percentile"] = p
+        rows.append(r)
+    return rows
