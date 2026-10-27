@@ -12,6 +12,7 @@ FS_RAW = 360            # MIT-BIH sampling rate
 DECIM = 2               # 360 -> 180 Hz (after 40 Hz low-pass this loses nothing useful)
 FS = FS_RAW // DECIM    # 180 Hz
 BAND = (0.5, 40.0)      # band-pass in Hz
+CAUSAL = True           # True: streaming-safe IIR filter (what the MCU can run). False: offline zero-phase
 
 # --- Windowing (same windows the ESP32 sliding-window loop will use) ---
 WINDOW_S = 2.0

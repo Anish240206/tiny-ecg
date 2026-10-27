@@ -1,7 +1,7 @@
 """MIT-BIH loading, filtering, windowing, labelling."""
 import numpy as np
 import wfdb
-from scipy.signal import butter, sosfiltfilt
+from scipy.signal import butter, sosfilt, sosfilt_zi, sosfiltfilt
 
 from . import config as C
 
@@ -20,9 +20,12 @@ def load_record(rec: int):
 
 
 def preprocess(sig, beat_samples):
-    """Band-pass 0.5-40 Hz, decimate to 180 Hz. Beat indices are rescaled to match."""
+    """Band-pass 0.5-40 Hz (causal by default), decimate to 180 Hz. Beat indices rescaled to match."""
     sos = butter(3, C.BAND, btype="band", fs=C.FS_RAW, output="sos")
-    filt = sosfiltfilt(sos, sig)
+    if C.CAUSAL:   # same recursion an MCU runs sample by sample; no look-ahead
+        filt = sosfilt(sos, sig, zi=sosfilt_zi(sos) * sig[0])[0]
+    else:
+        filt = sosfiltfilt(sos, sig)
     return filt[::C.DECIM].astype(np.float32), beat_samples // C.DECIM
 
 
@@ -49,7 +52,7 @@ def window_signal(sig, beat_idx, beat_sym, stride):
 def build_split(name: str, use_cache=True):
     """Returns X (n,W,1), y (n,), rec_ids (n,). Cached under data/processed/."""
     C.PROC_DIR.mkdir(parents=True, exist_ok=True)
-    cache = C.PROC_DIR / f"{name}.npz"
+    cache = C.PROC_DIR / f"{name}{'_causal' if C.CAUSAL else ''}.npz"   # separate cache per filter type
     if use_cache and cache.exists():
         d = np.load(cache)
         return d["X"], d["y"], d["rec"]
