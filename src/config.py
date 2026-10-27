@@ -39,8 +39,12 @@ BEAT_SYMBOLS = set("NLRBAaJSVrFejnE/fQ?")
 NORMAL_SYMBOL = "N"
 
 # --- Training / threshold ---
-BOTTLENECK_CH = 2   # latent = 45 steps x BOTTLENECK_CH channels
+BOTTLENECK_CH = 1   # latent = 45 steps x BOTTLENECK_CH channels
 EPOCHS = 100
 BATCH_SIZE = 128
 SEED = 42
 THRESHOLD_PERCENTILE = 99.0   # of reconstruction error on validation-normal windows
+
+# --- Anomaly score ---
+SCORE_MODE = "peak"   # "mean" or "peak" (see scoring.py)
+PEAK_POOL = 36        # 0.2 s at 180 Hz

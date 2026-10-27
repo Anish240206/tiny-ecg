@@ -2,6 +2,8 @@
 import numpy as np
 import tensorflow as tf
 
+from .scoring import scores_from_sq
+
 
 class TFLiteAE:
     def __init__(self, path):
@@ -21,7 +23,7 @@ class TFLiteAE:
         return (o - self.out_zp) * self.out_scale
 
     def error(self, x):
-        return float(np.mean((x - self.reconstruct(x)) ** 2))
+        return scores_from_sq(((x - self.reconstruct(x)) ** 2)[:, 0])
 
     def errors(self, X):
         return np.array([self.error(x) for x in X], dtype=np.float32)

@@ -6,6 +6,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 
 from . import config as C
+from .scoring import scores_from_sq
 
 
 def build_autoencoder(window=C.WINDOW, bottleneck_ch=C.BOTTLENECK_CH):
@@ -19,10 +20,10 @@ def build_autoencoder(window=C.WINDOW, bottleneck_ch=C.BOTTLENECK_CH):
     return keras.Model(inp, out, name="ecg_autoencoder")
 
 
-def recon_error(model, X, batch_size=512):
-    """Per-window mean squared reconstruction error."""
+def recon_error(model, X, batch_size=512, mode=None):
+    """Per-window anomaly score from squared reconstruction error (see scoring.py)."""
     pred = model.predict(X, batch_size=batch_size, verbose=0)
-    return np.mean((X - pred) ** 2, axis=(1, 2))
+    return scores_from_sq(((X - pred) ** 2)[..., 0], mode)
 
 
 if __name__ == "__main__":
