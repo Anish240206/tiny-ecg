@@ -1,0 +1,210 @@
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141339 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141334 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141359 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141332 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141337 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141358 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141343 us
+RESULT: 8/8 passed, avg latency 141345 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141343 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141353 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141338 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141334 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141355 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141343 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141331 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141366 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141339 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141353 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141353 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141353 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141346 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141337 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141355 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141332 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141342 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141353 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141339 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141337 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141360 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141333 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141357 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141340 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141352 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141335 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141332 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141357 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141351 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141351 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141334 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141351 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141336 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141338 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141351 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141334 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141360 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141339 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141336 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141344 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141356 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141335 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141358 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141327 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141335 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141365 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141340 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141352 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141342 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141335 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141333 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141359 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141337 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141352 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141342 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141344 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141356 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141336 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141334 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141355 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141343 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141332 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141366 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141332 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141349 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141352 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141336 us
+RESULT: 8/8 passed, avg latency 141345 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141331 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141337 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141355 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141340 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141355 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141336 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141332 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141359 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141336 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141357 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141342 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141350 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141344 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141336 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141356 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141350 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141350 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141340 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141368 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141336 us
+RESULT: 8/8 passed, avg latency 141346 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141332 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141355 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141339 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141332 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141358 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141338 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141336 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141353 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141339 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141358 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141333 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141353 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141336 us
+RESULT: 8/8 passed, avg latency 141342 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141326 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141356 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141333 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141368 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141335 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141351 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141340 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141339 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141335 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141361 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141336 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141351 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141343 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141332 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141338 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141354 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141335 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141363 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141335 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141355 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141335 us
+RESULT: 8/8 passed, avg latency 141343 us
+
+v0 label=0 mse=0.0230 expected=0.0239 | out mismatches=61 maxdiff=4 | PASS | 141338 us
+v1 label=0 mse=0.0080 expected=0.0076 | out mismatches=41 maxdiff=2 | PASS | 141326 us
+v2 label=0 mse=0.0327 expected=0.0313 | out mismatches=47 maxdiff=2 | PASS | 141370 us
+v3 label=0 mse=0.0182 expected=0.0187 | out mismatches=115 maxdiff=4 | PASS | 141337 us
+v4 label=1 mse=0.1704 expected=0.1706 | out mismatches=47 maxdiff=2 | PASS | 141356 us
+v5 label=1 mse=0.0700 expected=0.0706 | out mismatches=31 maxdiff=1 | PASS | 141335 us
+v6 label=1 mse=0.0942 expected=0.0938 | out mismatches=32 maxdiff=2 | PASS | 141354 us
+v7 label=1 mse=0.0197 expected=0.0201 | out mismatches=51 maxdiff=2 | PASS | 141336 us
+RESULT: 8/8 passed, avg latency 141344 us
+
