@@ -6,13 +6,20 @@
 //   -> alarm if >= K of the last M windows are flagged -> repeat.
 //
 // Sketch folder must contain: sliding_window_loop.ino, stream_data.h, ecg_ae_model.h
-// (stream_data.h and ecg_ae_model.h are written by `python -m src.export_stream`).
+// (written by `python -m src.export_stream`) and, for USE_RAW_FILTER 1, raw_data.h
+// (written by `python -m src.export_raw`).
+//
+// USE_RAW_FILTER 1: the board receives RAW 360 Hz ADC counts and runs the causal 0.5-40 Hz
+//                   band-pass + decimation to 180 Hz itself (what live ECG needs); the filtered
+//                   stream is also checked against the desktop stream.
+// USE_RAW_FILTER 0: replay the already-filtered 180 Hz stream from stream_data.h.
 //
 // FAST_FORWARD 1: replay as fast as possible (quick check, ~1 min for 300 s of signal)
 // FAST_FORWARD 0: real time - a 180 Hz timer feeds samples while the loop runs inference
 //
 // Open Serial Monitor (115200) and send any character to start / run again.
 
+#define USE_RAW_FILTER 1
 #define FAST_FORWARD 1
 #define PRINT_ALL    1     // 1: print every window, 0: only flagged windows and alarms
 
@@ -25,6 +32,9 @@
 #include "tensorflow/lite/schema/schema_generated.h"
 #include "ecg_ae_model.h"
 #include "stream_data.h"
+#if USE_RAW_FILTER
+#include "raw_data.h"
+#endif
 
 constexpr int kArenaSize = 96 * 1024;
 alignas(16) static uint8_t tensor_arena[kArenaSize];
@@ -47,9 +57,42 @@ static inline void pushSample(float v) {
   head = head + 1;
 }
 
-static void onTick(void*) {                       // stands in for the ADC interrupt at 180 Hz
+#if USE_RAW_FILTER
+#define SRC_LEN RAW_LEN
+#define SRC_FS  RAW_FS
+static double zs[SOS_NSEC][2];                    // filter state (double: only ~1% CPU at 360 Hz)
+static double f_max = 0, f_sq_diff = 0, f_sq_ref = 0;
+
+// One raw ADC sample in: causal band-pass (same recursion as scipy sosfilt), keep every RAW_DECIM-th output.
+static void ingest(uint32_t i) {
+  double x = (double)RAW_SAMPLES[i];
+  if (i == 0) for (int s = 0; s < SOS_NSEC; s++) { zs[s][0] = SOS_ZI[s][0] * x; zs[s][1] = SOS_ZI[s][1] * x; }
+  for (int s = 0; s < SOS_NSEC; s++) {
+    double y = SOS_COEF[s][0] * x + zs[s][0];
+    zs[s][0] = SOS_COEF[s][1] * x - SOS_COEF[s][3] * y + zs[s][1];
+    zs[s][1] = SOS_COEF[s][2] * x - SOS_COEF[s][4] * y;
+    x = y;
+  }
+  if (i % RAW_DECIM == 0) {
+    float v = (float)(x / RAW_GAIN);              // counts -> mV
+    uint32_t k = head;
+    if (k < SW_LEN) {                             // compare with the desktop-filtered stream
+      double d = (double)v - SW_STREAM[k];
+      if (fabs(d) > f_max) f_max = fabs(d);
+      f_sq_diff += d * d; f_sq_ref += (double)SW_STREAM[k] * SW_STREAM[k];
+    }
+    pushSample(v);
+  }
+}
+#else
+#define SRC_LEN SW_LEN
+#define SRC_FS  SW_FS
+static inline void ingest(uint32_t i) { pushSample(SW_STREAM[i]); }
+#endif
+
+static void onTick(void*) {                       // stands in for the ADC interrupt
   uint32_t i = src_i;
-  if (i < SW_LEN) { pushSample(SW_STREAM[i]); src_i = i + 1; }
+  if (i < SRC_LEN) { ingest(i); src_i = i + 1; }
 }
 
 // ---- run state ----
@@ -82,10 +125,14 @@ static void startRun() {
   n_flag = n_alarm = n_episodes = n_truth = 0;
   flag_mismatch = alarm_mismatch = overruns = 0;
   rel_sum = 0; rel_max = 0;
+#if USE_RAW_FILTER
+  f_max = f_sq_diff = f_sq_ref = 0;
+#endif
   inf_sum_us = inf_max_us = win_sum_us = win_max_us = 0;
-  Serial.printf("\n== replay: record %d | preset %s (%d-of-%d) | threshold %.4f | %d windows | mode %s ==\n",
+  Serial.printf("\n== replay: record %d | preset %s (%d-of-%d) | threshold %.4f | %d windows | %s | %s ==\n",
                 SW_RECORD, SW_PRESET, SW_K, SW_M, (double)SW_THRESHOLD, SW_NUM_WIN,
-                FAST_FORWARD ? "fast-forward" : "real-time");
+                FAST_FORWARD ? "fast-forward" : "real-time",
+                USE_RAW_FILTER ? "raw 360 Hz + on-board filter" : "pre-filtered 180 Hz");
   Serial.printf("arena used %u of %d bytes | in scale %.6f zp %d | out scale %.6f zp %d\n",
                 (unsigned)interp->arena_used_bytes(), kArenaSize,
                 in_t->params.scale, in_t->params.zero_point, out_t->params.scale, out_t->params.zero_point);
@@ -94,7 +141,7 @@ static void startRun() {
   ta.callback = &onTick;
   ta.name = "adc180";
   esp_timer_create(&ta, &tick_timer);
-  esp_timer_start_periodic(tick_timer, 1000000 / SW_FS);
+  esp_timer_start_periodic(tick_timer, 1000000 / SRC_FS);
 #endif
   running = true;
 }
@@ -111,6 +158,10 @@ static void finishRun() {
                 SW_REF_FLAGGED, SW_REF_ALARM_WINDOWS, SW_REF_EPISODES);
   Serial.printf("vs reference: flag mismatches %u | alarm-window mismatches %u | mean |err-ref|/ref %.1f%% (max %.1f%%)\n",
                 (unsigned)flag_mismatch, (unsigned)alarm_mismatch, 100.0 * rel_sum / n, 100.0 * rel_max);
+#if USE_RAW_FILTER
+  Serial.printf("on-board filter vs desktop stream: max |diff| %.2e mV, rms diff %.2e mV (signal rms %.3f mV)\n",
+                f_max, sqrt(f_sq_diff / SW_LEN), sqrt(f_sq_ref / SW_LEN));
+#endif
   Serial.printf("inference avg %u us, max %u us | full window step avg %u us, max %u us (budget %u us)\n",
                 (unsigned)(inf_sum_us / n), (unsigned)inf_max_us,
                 (unsigned)(win_sum_us / n), (unsigned)win_max_us, (unsigned)(1000000UL * SW_STRIDE / SW_FS));
@@ -195,11 +246,11 @@ void loop() {
 
   if (head < next_end) {
 #if FAST_FORWARD
-    while (head < next_end && src_i < SW_LEN) pushSample(SW_STREAM[src_i++]);
+    while (head < next_end && src_i < SRC_LEN) ingest(src_i++);
 #else
     delay(2);
 #endif
-    if (head < next_end && src_i >= SW_LEN) { finishRun(); return; }      // stream exhausted
+    if (head < next_end && src_i >= SRC_LEN) { finishRun(); return; }      // stream exhausted
     if (head < next_end) return;
   }
   processWindow(next_end);
