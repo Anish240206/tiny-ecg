@@ -1,0 +1,310 @@
+tinyecg ready - send any character to start
+
+== replay: record 210 | preset balanced (3-of-5) | threshold 0.0672 | 299 windows | mode fast-forward ==
+arena used 20012 of 98304 bytes | in scale 0.050207 zp -35 | out scale 0.048997 zp -34
+t=    2.0s err=0.0557                     truth=ANOM
+t=    3.0s err=0.0178                     truth=ANOM
+t=    4.0s err=0.0132                     truth=norm
+t=    5.0s err=0.0145                     truth=norm
+t=    6.0s err=0.0098                     truth=norm
+t=    7.0s err=0.0144                     truth=norm
+t=    8.0s err=0.0102                     truth=norm
+t=    9.0s err=0.0108                     truth=norm
+t=   10.0s err=0.0096                     truth=norm
+t=   11.0s err=0.0241                     truth=ANOM
+t=   12.0s err=0.0436                     truth=ANOM
+t=   13.0s err=0.0134                     truth=norm
+t=   14.0s err=0.0100                     truth=norm
+t=   15.0s err=0.0219                     truth=norm
+t=   16.0s err=0.0078                     truth=norm
+t=   17.0s err=0.0123                     truth=norm
+t=   18.0s err=0.0085                     truth=norm
+t=   19.0s err=0.0379                     truth=ANOM
+t=   20.0s err=0.0213                     truth=ANOM
+t=   21.0s err=0.0145                     truth=norm
+t=   22.0s err=0.0076                     truth=norm
+t=   23.0s err=0.0437                     truth=ANOM
+t=   24.0s err=0.0444                     truth=ANOM
+t=   25.0s err=0.0128                     truth=norm
+t=   26.0s err=0.0113                     truth=norm
+t=   27.0s err=0.0134                     truth=norm
+t=   28.0s err=0.0120                     truth=norm
+t=   29.0s err=0.0069                     truth=norm
+t=   30.0s err=0.0118                     truth=norm
+t=   31.0s err=0.0195                     truth=ANOM
+t=   32.0s err=0.0314                     truth=ANOM
+t=   33.0s err=0.0263                     truth=norm
+t=   34.0s err=0.0113                     truth=norm
+t=   35.0s err=0.0165                     truth=ANOM
+t=   36.0s err=0.0656                     truth=ANOM
+t=   37.0s err=0.0115                     truth=norm
+t=   38.0s err=0.0079                     truth=norm
+t=   39.0s err=0.0114                     truth=norm
+t=   40.0s err=0.0108                     truth=norm
+t=   41.0s err=0.0094                     truth=norm
+t=   42.0s err=0.0095                     truth=norm
+t=   43.0s err=0.0108                     truth=norm
+t=   44.0s err=0.0109                     truth=norm
+t=   45.0s err=0.0090                     truth=norm
+t=   46.0s err=0.0078                     truth=norm
+t=   47.0s err=0.0148                     truth=norm
+t=   48.0s err=0.0158                     truth=ANOM
+t=   49.0s err=0.0185                     truth=ANOM
+t=   50.0s err=0.0101                     truth=norm
+t=   51.0s err=0.0088                     truth=norm
+t=   52.0s err=0.0098                     truth=norm
+t=   53.0s err=0.0109                     truth=norm
+t=   54.0s err=0.0189                     truth=ANOM
+t=   55.0s err=0.1374 flag                truth=ANOM
+t=   56.0s err=0.0120                     truth=norm
+t=   57.0s err=0.0078                     truth=norm
+t=   58.0s err=0.0089                     truth=norm
+t=   59.0s err=0.0141                     truth=norm
+t=   60.0s err=0.0118                     truth=norm
+t=   61.0s err=0.0127                     truth=norm
+t=   62.0s err=0.0078                     truth=norm
+t=   63.0s err=0.0097                     truth=norm
+t=   64.0s err=0.0099                     truth=norm
+t=   65.0s err=0.0162                     truth=norm
+t=   66.0s err=0.0127                     truth=norm
+t=   67.0s err=0.0127                     truth=norm
+t=   68.0s err=0.0091                     truth=norm
+t=   69.0s err=0.0124                     truth=norm
+t=   70.0s err=0.0125                     truth=norm
+t=   71.0s err=0.0500                     truth=ANOM
+t=   72.0s err=0.0217                     truth=ANOM
+t=   73.0s err=0.0147                     truth=norm
+t=   74.0s err=0.0116                     truth=norm
+t=   75.0s err=0.0085                     truth=norm
+t=   76.0s err=0.0158                     truth=norm
+t=   77.0s err=0.0094                     truth=norm
+t=   78.0s err=0.0103                     truth=norm
+t=   79.0s err=0.0087                     truth=norm
+t=   80.0s err=0.0161                     truth=norm
+t=   81.0s err=0.0118                     truth=norm
+t=   82.0s err=0.0088                     truth=norm
+t=   83.0s err=0.0174                     truth=norm
+t=   84.0s err=0.0204                     truth=norm
+t=   85.0s err=0.0104                     truth=norm
+t=   86.0s err=0.0088                     truth=norm
+t=   87.0s err=0.0074                     truth=norm
+t=   88.0s err=0.0256                     truth=norm
+t=   89.0s err=0.0124                     truth=norm
+t=   90.0s err=0.0103                     truth=norm
+t=   91.0s err=0.0119                     truth=norm
+t=   92.0s err=0.0127                     truth=norm
+t=   93.0s err=0.0089                     truth=norm
+t=   94.0s err=0.0168                     truth=norm
+t=   95.0s err=0.0132                     truth=norm
+t=   96.0s err=0.0096                     truth=norm
+t=   97.0s err=0.0152                     truth=norm
+t=   98.0s err=0.0244                     truth=ANOM
+t=   99.0s err=0.0432                     truth=ANOM
+t=  100.0s err=0.0382                     truth=ANOM
+t=  101.0s err=0.0084                     truth=norm
+t=  102.0s err=0.0118                     truth=norm
+t=  103.0s err=0.0115                     truth=norm
+t=  104.0s err=0.0101                     truth=norm
+t=  105.0s err=0.0081                     truth=norm
+t=  106.0s err=0.0198                     truth=norm
+t=  107.0s err=0.0125                     truth=norm
+t=  108.0s err=0.0189                     truth=norm
+t=  109.0s err=0.0101                     truth=norm
+t=  110.0s err=0.0135                     truth=norm
+t=  111.0s err=0.0156                     truth=norm
+t=  112.0s err=0.0158                     truth=norm
+t=  113.0s err=0.0085                     truth=norm
+t=  114.0s err=0.0166                     truth=norm
+t=  115.0s err=0.0108                     truth=norm
+t=  116.0s err=0.0118                     truth=norm
+t=  117.0s err=0.0095                     truth=norm
+t=  118.0s err=0.0099                     truth=norm
+t=  119.0s err=0.0092                     truth=norm
+t=  120.0s err=0.0130                     truth=norm
+t=  121.0s err=0.0095                     truth=norm
+t=  122.0s err=0.0090                     truth=norm
+t=  123.0s err=0.0134                     truth=norm
+t=  124.0s err=0.0237                     truth=ANOM
+t=  125.0s err=0.0229                     truth=ANOM
+t=  126.0s err=0.0335                     truth=ANOM
+t=  127.0s err=0.0729 flag                truth=ANOM
+t=  128.0s err=0.0183                     truth=ANOM
+t=  129.0s err=0.0412                     truth=ANOM
+t=  130.0s err=0.0190                     truth=ANOM
+t=  131.0s err=0.0258                     truth=ANOM
+t=  132.0s err=0.0172                     truth=ANOM
+t=  133.0s err=0.0222                     truth=ANOM
+t=  134.0s err=0.0186                     truth=ANOM
+t=  135.0s err=0.0548                     truth=ANOM
+t=  136.0s err=0.0440                     truth=ANOM
+t=  137.0s err=0.0197                     truth=norm
+t=  138.0s err=0.0096                     truth=ANOM
+t=  139.0s err=0.0147                     truth=ANOM
+t=  140.0s err=0.0286                     truth=norm
+t=  141.0s err=0.0088                     truth=norm
+t=  142.0s err=0.0097                     truth=norm
+t=  143.0s err=0.0088                     truth=norm
+t=  144.0s err=0.0149                     truth=norm
+t=  145.0s err=0.0116                     truth=norm
+t=  146.0s err=0.0091                     truth=norm
+t=  147.0s err=0.0128                     truth=norm
+t=  148.0s err=0.0089                     truth=norm
+t=  149.0s err=0.0122                     truth=norm
+t=  150.0s err=0.0176                     truth=norm
+t=  151.0s err=0.0134                     truth=norm
+t=  152.0s err=0.0109                     truth=norm
+t=  153.0s err=0.0113                     truth=norm
+t=  154.0s err=0.0110                     truth=norm
+t=  155.0s err=0.0138                     truth=norm
+t=  156.0s err=0.0093                     truth=norm
+t=  157.0s err=0.0160                     truth=norm
+t=  158.0s err=0.0116                     truth=norm
+t=  159.0s err=0.0077                     truth=norm
+t=  160.0s err=0.0128                     truth=norm
+t=  161.0s err=0.0092                     truth=norm
+t=  162.0s err=0.0163                     truth=norm
+t=  163.0s err=0.0111                     truth=norm
+t=  164.0s err=0.0132                     truth=norm
+t=  165.0s err=0.0121                     truth=norm
+t=  166.0s err=0.0130                     truth=norm
+t=  167.0s err=0.0159                     truth=norm
+t=  168.0s err=0.0138                     truth=norm
+t=  169.0s err=0.0124                     truth=norm
+t=  170.0s err=0.0159                     truth=norm
+t=  171.0s err=0.0390                     truth=norm
+t=  172.0s err=0.0386                     truth=norm
+t=  173.0s err=0.0263                     truth=norm
+t=  174.0s err=0.0088                     truth=norm
+t=  175.0s err=0.0095                     truth=norm
+t=  176.0s err=0.0128                     truth=norm
+t=  177.0s err=0.0091                     truth=norm
+t=  178.0s err=0.0153                     truth=norm
+t=  179.0s err=0.0350                     truth=norm
+t=  180.0s err=0.0401                     truth=norm
+t=  181.0s err=0.0253                     truth=norm
+t=  182.0s err=0.0229                     truth=norm
+t=  183.0s err=0.0187                     truth=norm
+t=  184.0s err=0.0210                     truth=norm
+t=  185.0s err=0.0344                     truth=norm
+t=  186.0s err=0.0421                     truth=norm
+t=  187.0s err=0.0494                     truth=norm
+t=  188.0s err=0.0597                     truth=norm
+t=  189.0s err=0.0601                     truth=norm
+t=  190.0s err=0.0651                     truth=norm
+t=  191.0s err=0.0507                     truth=norm
+t=  192.0s err=0.0553                     truth=norm
+t=  193.0s err=0.0566                     truth=norm
+t=  194.0s err=0.0508                     truth=norm
+t=  195.0s err=0.0466                     truth=norm
+t=  196.0s err=0.0422                     truth=norm
+t=  197.0s err=0.0241                     truth=norm
+t=  198.0s err=0.0157                     truth=norm
+t=  199.0s err=0.0111                     truth=norm
+t=  200.0s err=0.0210                     truth=norm
+t=  201.0s err=0.0461                     truth=ANOM
+t=  202.0s err=0.0449                     truth=ANOM
+t=  203.0s err=0.0096                     truth=norm
+t=  204.0s err=0.0114                     truth=norm
+t=  205.0s err=0.0096                     truth=norm
+t=  206.0s err=0.0124                     truth=norm
+t=  207.0s err=0.0108                     truth=norm
+t=  208.0s err=0.0165                     truth=ANOM
+t=  209.0s err=0.0372                     truth=ANOM
+t=  210.0s err=0.0112                     truth=norm
+t=  211.0s err=0.0196                     truth=ANOM
+t=  212.0s err=0.0095                     truth=ANOM
+t=  213.0s err=0.0162                     truth=norm
+t=  214.0s err=0.0071                     truth=norm
+t=  215.0s err=0.0115                     truth=norm
+t=  216.0s err=0.0106                     truth=norm
+t=  217.0s err=0.0106                     truth=norm
+t=  218.0s err=0.0109                     truth=norm
+t=  219.0s err=0.0112                     truth=norm
+t=  220.0s err=0.0118                     truth=norm
+t=  221.0s err=0.0095                     truth=norm
+t=  222.0s err=0.0104                     truth=norm
+t=  223.0s err=0.0150                     truth=norm
+t=  224.0s err=0.0261                     truth=ANOM
+t=  225.0s err=0.0402                     truth=ANOM
+t=  226.0s err=0.0539                     truth=norm
+t=  227.0s err=0.1816 flag                truth=norm
+t=  228.0s err=0.1420 flag                truth=norm
+t=  229.0s err=0.0578                     truth=norm
+t=  230.0s err=0.1677 flag  *** ALARM *** truth=norm
+t=  231.0s err=0.1921 flag  *** ALARM *** truth=norm
+t=  232.0s err=0.1128 flag  *** ALARM *** truth=norm
+t=  233.0s err=0.1427 flag  *** ALARM *** truth=norm
+t=  234.0s err=0.1385 flag  *** ALARM *** truth=ANOM
+t=  235.0s err=0.1374 flag  *** ALARM *** truth=ANOM
+t=  236.0s err=0.0723 flag  *** ALARM *** truth=norm
+t=  237.0s err=0.0874 flag  *** ALARM *** truth=norm
+t=  238.0s err=0.0874 flag  *** ALARM *** truth=norm
+t=  239.0s err=0.1053 flag  *** ALARM *** truth=norm
+t=  240.0s err=0.1101 flag  *** ALARM *** truth=norm
+t=  241.0s err=0.1162 flag  *** ALARM *** truth=ANOM
+t=  242.0s err=0.1165 flag  *** ALARM *** truth=ANOM
+t=  243.0s err=0.1062 flag  *** ALARM *** truth=norm
+t=  244.0s err=0.0855 flag  *** ALARM *** truth=norm
+t=  245.0s err=0.0777 flag  *** ALARM *** truth=norm
+t=  246.0s err=0.0350       *** ALARM *** truth=norm
+t=  247.0s err=0.0086       *** ALARM *** truth=norm
+t=  248.0s err=0.0079                     truth=norm
+t=  249.0s err=0.0132                     truth=norm
+t=  250.0s err=0.0104                     truth=norm
+t=  251.0s err=0.0117                     truth=norm
+t=  252.0s err=0.0107                     truth=norm
+t=  253.0s err=0.0163                     truth=norm
+t=  254.0s err=0.0118                     truth=norm
+t=  255.0s err=0.0079                     truth=norm
+t=  256.0s err=0.0101                     truth=norm
+t=  257.0s err=0.0085                     truth=norm
+t=  258.0s err=0.0128                     truth=ANOM
+t=  259.0s err=0.0127                     truth=ANOM
+t=  260.0s err=0.0197                     truth=ANOM
+t=  261.0s err=0.0449                     truth=ANOM
+t=  262.0s err=0.0090                     truth=norm
+t=  263.0s err=0.0109                     truth=norm
+t=  264.0s err=0.0116                     truth=norm
+t=  265.0s err=0.0100                     truth=norm
+t=  266.0s err=0.0096                     truth=norm
+t=  267.0s err=0.0096                     truth=norm
+t=  268.0s err=0.0079                     truth=norm
+t=  269.0s err=0.0138                     truth=ANOM
+t=  270.0s err=0.0159                     truth=ANOM
+t=  271.0s err=0.0151                     truth=norm
+t=  272.0s err=0.0110                     truth=norm
+t=  273.0s err=0.0134                     truth=norm
+t=  274.0s err=0.0102                     truth=norm
+t=  275.0s err=0.0103                     truth=norm
+t=  276.0s err=0.0185                     truth=norm
+t=  277.0s err=0.0134                     truth=norm
+t=  278.0s err=0.0099                     truth=norm
+t=  279.0s err=0.0100                     truth=norm
+t=  280.0s err=0.0259                     truth=ANOM
+t=  281.0s err=0.0214                     truth=ANOM
+t=  282.0s err=0.0103                     truth=norm
+t=  283.0s err=0.0130                     truth=norm
+t=  284.0s err=0.0107                     truth=norm
+t=  285.0s err=0.0102                     truth=norm
+t=  286.0s err=0.0144                     truth=norm
+t=  287.0s err=0.0087                     truth=norm
+t=  288.0s err=0.0130                     truth=norm
+t=  289.0s err=0.0140                     truth=norm
+t=  290.0s err=0.0112                     truth=norm
+t=  291.0s err=0.0121                     truth=norm
+t=  292.0s err=0.0111                     truth=norm
+t=  293.0s err=0.0105                     truth=norm
+t=  294.0s err=0.0075                     truth=norm
+t=  295.0s err=0.0161                     truth=norm
+t=  296.0s err=0.0406                     truth=ANOM
+t=  297.0s err=0.0181                     truth=ANOM
+t=  298.0s err=0.0145                     truth=norm
+t=  299.0s err=0.0110                     truth=norm
+t=  300.0s err=0.0101                     truth=norm
+
+299 windows | truth-anomalous 58 | flagged 20 | alarm windows 18 | alarm episodes 1
+desktop reference: flagged 20 | alarm windows 18 | alarm episodes 1
+vs reference: flag mismatches 0 | alarm-window mismatches 0 | mean |err-ref|/ref 2.7% (max 21.1%)
+inference avg 141369 us, max 141598 us | full window step avg 143442 us, max 143706 us (budget 1000000 us)
+Send any character to run again.
+tinyecg ready - send any character to start
